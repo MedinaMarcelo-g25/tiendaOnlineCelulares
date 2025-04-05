@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Tienda de Celulares</title>  
+    <link rel="stylesheet" href="./css/styles.css">  
+</head>  
+<body>  
+    <header>  
+        <nav>  
+            <div class="contenedor-logo">
+                <img src="../assets/logo.png" alt="Logo de la Tienda" class="logo">
+            </div>
+            <ul class="menu-navegacion">  
+                <li><a href="../index.html">Inicio</a></li>  
+                <li>  
+                    <a href="#">Categorías</a>  
+                    <ul>  
+                        <li><a href="#">Celulares</a></li>  
+                        <li><a href="#">Perfumería</a></li>  
+                        <li><a href="#">Electrónica</a></li>  
+                    </ul>  
+                </li>  
+                <li><a href="#">Contacto</a></li>  
+            </ul>  
+            <input type="text" placeholder="Buscar..." class="buscador">  
+            <div class="acciones-usuario">  
+                <a href="#">Iniciar Sesión</a>  
+                <a href="./pages/cart.html">🛒</a>  
+            </div>  
+        </nav>  
+    </header>  
+
+    <main>  
+        <h1>Bienvenido a nuestra Tienda de Celulares</h1>  
+        <div class="contenedor-filtro">  
+            <input type="text" id="filtrarInput" placeholder="Filtrar productos..." onkeyup="filtrarProductos()">  
+        </div>  
+        <div id="listaProductos" class="lista-productos"></div> 
+    </main>  
+
+    <div id="mensajeCarrito" class="mensaje-carrito oculto"></div>
+
+    <footer>  
+        <p>&copy; 2025 Tienda de Celulares. Todos los derechos reservados.</p>  
+    </footer>  
+      
+    <script src="./scripts/products.js"></script> 
+</body>  
+</html>

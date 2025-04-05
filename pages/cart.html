@@ -1,0 +1,49 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Carrito de Compras</title>  
+    <link rel="stylesheet" href="../css/styles.css">  
+</head>  
+<body>  
+    <header>  
+        <nav>  
+            <div class="contenedor-logo">
+                <img src="../assets/logo.png" alt="Logo de la Tienda" class="logo">
+            </div>
+            <ul class="menu-navegacion">  
+                <li><a href="../index.html">Inicio</a></li>  
+                <li>  
+                    <a href="#">Categorías</a>  
+                    <ul>  
+                        <li><a href="#">Celulares</a></li>  
+                        <li><a href="#">Perfumería</a></li>  
+                        <li><a href="#">Electrónica</a></li>  
+                    </ul>  
+                </li>  
+                <li><a href="#">Contacto</a></li>  
+            </ul>  
+            <input type="text" placeholder="Buscar..." class="buscador">  
+            <div class="acciones-usuario">  
+                <a href="#">Iniciar Sesión</a>  
+                <a href="./cart.html">🛒</a>  
+            </div>  
+        </nav>  
+    </header>  
+
+    <main>  
+        <h1>Tu Carrito de Compras</h1>  
+        <ul id="itemsCarrito"></ul>  
+        <p id="precioTotal">Total: $0</p>  
+        <button id="limpiarCarrito">Limpiar Carrito</button>  
+    </main>  
+
+    <footer>  
+        <p>&copy; 2025 Tienda de Celulares. Todos los derechos reservados.</p>  
+    </footer>  
+    
+    <script src="../scripts/products.js"></script> 
+    <script src="../scripts/cart.js"></script>
+</body>  
+</html>  
