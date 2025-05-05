@@ -30,13 +30,27 @@
                 <a href="./cart.html">🛒</a>  
             </div>  
         </nav>  
+        <h1>Carrito de Compras</h1>
     </header>  
 
     <main>  
         <h1>Tu Carrito de Compras</h1>  
-        <ul id="itemsCarrito"></ul>  
-        <p id="precioTotal">Total: $0</p>  
-        <button id="limpiarCarrito">Limpiar Carrito</button>  
+        <div id="itemsCarrito"></div>  
+        <h2 id="precioTotal"></h2>  
+
+        <button id="limpiarCarrito" class="btn">Vaciar Carrito</button>  
+
+        <section id="datosCliente">
+            <h2>Datos del Cliente</h2>
+            <form id="formDatosCliente">
+                <input type="text" id="nombreCliente" placeholder="Nombre" required>
+                <input type="email" id="emailCliente" placeholder="Email" required>
+                <input type="text" id="direccionCliente" placeholder="Dirección" required>
+                <button type="submit" class="btn">Guardar Datos</button>
+            </form>
+        </section>  
+
+        <button id="finalizarCompra" class="btn">Finalizar Compra</button>  
     </main>  
 
     <footer>  
@@ -45,5 +59,6 @@
     
     <script src="../scripts/products.js"></script> 
     <script src="../scripts/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>  
-</html>  
+</html>

@@ -36,7 +36,7 @@ nav {
 .contenedor-logo {
     display: flex;
     align-items: center;
-    flex-shrink: 0; /* Evita que el logo se reduzca */
+    flex-shrink: 0; 
 }
 
 .logo {
@@ -159,11 +159,14 @@ footer {
 
 /* Productos del carrito */
 .producto-carrito {
+    flex: 0 0 auto;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
     background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: calc(25% - 20px); 
 }
 
 .producto-carrito img {
@@ -173,24 +176,29 @@ footer {
 }
 
 .producto-carrito h2 {
-    font-size: 1.2em;
-    color: var(--text-color); 
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.producto-carrito p {
+    font-size: 0.9rem;
+    color: #555;
 }
 
 .producto-carrito button {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
-    padding: 10px 15px;
     border: none;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .producto-carrito button:hover {
-    background-color: #238c3e; /* Un tono más oscuro del color secundario */
+    background-color: var(--secondary-color);
 }
 
-/* Mensaje del carrito */
 .mensaje-carrito {
     position: fixed;
     top: 20px;
@@ -216,9 +224,21 @@ footer {
     display: none;
 }
 
-/* Estilos para pantallas pequeñas */
+/* Carrusel */
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none; 
+}
+
 @media (max-width: 768px) {
-    /* Ajustar el menú de navegación */
+    /* Menú de navegación */
     nav {
         flex-wrap: wrap; 
         gap: 10px; 
@@ -230,23 +250,20 @@ footer {
         gap: 10px;
     }
 
-    /* Ajustar el logo */
     .logo {
         height: 60px; 
     }
 
-    /* Ajustar la barra de búsqueda */
+    /* Barra de búsqueda */
     .buscador {
-        max-width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 100%; 
     }
 
-    /* Ajustar las acciones del usuario */
     .acciones-usuario {
         flex-direction: column; 
         gap: 10px;
     }
 
-    /* Ajustar la lista de productos */
     .lista-productos {
         flex-direction: column; 
         gap: 15px;
@@ -255,5 +272,71 @@ footer {
     .producto-carrito {
         width: 100%; 
     }
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    align-self: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button {
+    background-color: var(--primary-color); 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: var(--secondary-color); 
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
