@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.add("item-carrito");
 
             item.innerHTML = `
-                <img src="${producto.imagenUrl}" alt="${producto.nombre}">
+                <img src="${ajustarRutaImagen(producto.imagenUrl)}" alt="${producto.nombre}">
                 <h3>${producto.nombre}</h3>
                 <p>Precio: $${producto.precio.toFixed(2)}</p>
                 <button onclick="eliminarDelCarrito(${indice})">Eliminar</button>
@@ -28,6 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         elementoPrecioTotal.textContent = `Total: $${total.toFixed(2)}`;
         localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
+    function ajustarRutaImagen(imagenUrl) {
+        const esPaginaCart = window.location.pathname.includes("cart.html");
+
+        return esPaginaCart ? `../${imagenUrl}` : imagenUrl;
     }
 
     function guardarCarrito() {
